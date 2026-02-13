@@ -9,7 +9,7 @@ dp = Dispatcher()
 
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message):
-    await message.answer("Привет!")
+    await message.answer("Привет 2!")
 
 @dp.message(lambda message.photo)
 async def photo_id(message: types.Message):
@@ -20,4 +20,5 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
+
     asyncio.run(main())
