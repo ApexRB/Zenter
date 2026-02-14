@@ -10,7 +10,7 @@ dp = Dispatcher()
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message):
     await message.answer("Вот и фотка, лол")
-    photo_url = 'https://raw.githubusercontent.com/ApexRB/Zenter/refs/heads/main/Images/start.jpg'
+    photo_url = 'https://raw.githubusercontent.com/ApexRB/Zenter/735e4c6954e374a6268fbfbabb7dfbf720a2f8b3/Images/start.jpg'
     
     await message.answer_photo(
         photo=photo_url,
@@ -27,3 +27,4 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+
