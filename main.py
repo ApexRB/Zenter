@@ -9,9 +9,15 @@ dp = Dispatcher()
 
 @dp.message(Command("start"))
 async def cmd_start(message: types.Message):
-    await message.answer("Привет 2!")
+    await message.answer("Вот и фотка, лол")
+    photo_url = 'https://raw.githubusercontent.com/ApexRB/Zenter/refs/heads/main/Images/start.jpg'
+    
+    await message.answer_photo(
+        photo=photo_url,
+        caption='Привет падруга!)'
+    )
 
-@dp.message(lambda message.photo)
+@dp.message(lambda message: message.photo)
 async def photo_id(message: types.Message):
     await message.answer(message.photo[-1].photo_id)
 
@@ -20,5 +26,4 @@ async def main():
     await dp.start_polling(bot)
 
 if __name__ == "__main__":
-
     asyncio.run(main())
